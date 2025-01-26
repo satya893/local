@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Varieties</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .ice-cream-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .ice-cream {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            width: 200px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .ice-cream img {
+            width: 100%;
+            border-radius: 5px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .ice-cream h3 {
+            margin: 10px 0;
+        }
+
+        .options {
+            margin-top: 10px;
+        }
+
+        .options label, .options input {
+            margin: 5px 0;
+        }
+
+        .buttons {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ice Cream Varieties</h1>
+        <p>Delicious and Refreshing Treats for Everyone</p>
+    </header>
+
+    <div class="section" id="ice-cream-varieties">
+        <h2>Vanilla Ice Cream</h2>
+        <div class="ice-cream">
+            <img src="https://joyfoodsunshine.com/wp-content/uploads/2020/07/homemade-vanilla-ice-cream-recipe-6.jpg" alt="Vanilla Ice Cream">
+            <h3>Vanilla</h3>
+            <p>Price: ₹50</p>
+            <div class="options">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+            </div>
+            <div class="buttons">
+                <button onclick="addToCart()">Add to Cart</button>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
+        <div class="ice-cream">
+            <img src="https://www.thelittleepicurean.com/wp-content/uploads/2020/07/no-churn-corn-ice-cream.jpg" alt="Vanilla Ice Cream">
+            <h3>Vanilla cone</h3>
+            <p>Price: ₹25</p>
+            <div class="options">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+            </div>
+            <div class="buttons">
+                <button onclick="addToCart()">Add to Cart</button>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
+        <div class="ice-cream">
+            <img src="https://th.bing.com/th/id/R.22f58a595ab0c6d248989112a905c88b?rik=x6b7H1vGrXJ1rQ&riu=http%3a%2f%2fsofty.quickcream.com%2fwp-content%2fuploads%2fsites%2f25%2f2017%2f02%2fsoft-serve-ice-cream-e1489049677252.jpg&ehk=zI%2bMQdQzAHmDXAz445XTDkaWkX%2b461zaSPNXcTBOx38%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1" alt="Vanilla Ice Cream">
+            <h3>Vanilla cone</h3>
+            <p>Price: ₹25</p>
+            <div class="options">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+            </div>
+            <div class="buttons">
+                <button onclick="addToCart()">Add to Cart</button>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
+        <div class="ice-cream">
+            <img src="https://www.bigbasket.com/media/uploads/p/l/40003798-9_1-amul-real-ice-cream-fruit-n-nut-fantasy.jpg" alt="Vanilla Ice Cream">
+            <h3>Vanilla box</h3>
+            <p>Price: ₹199</p>
+            <p></p>
+            <div class="options">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+            </div>
+            <div class="buttons">
+                <button onclick="addToCart()">Add to Cart</button>
+                <button onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Ice Cream Paradise. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function addToCart() {
+            const quantity = document.getElementById('quantity').value;
+            alert(`You have added ${quantity} Vanilla Ice Cream(s) to your cart.`);
+        }
+
+        function buyNow() {
+            const quantity = document.getElementById('quantity').value;
+            alert(`You have purchased ${quantity} Vanilla Ice Cream(s). Thank you!`);
+        }
+    </script>
+</body>
+</html>
